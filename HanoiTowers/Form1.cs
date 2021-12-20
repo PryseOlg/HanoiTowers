@@ -99,8 +99,8 @@ namespace HanoiTowers
             int n;
             if (!int.TryParse(input, out n)||n>15||input=="")//More than 15 is solveable. But the button heights arent responsible. So it doesnt fit in the screen :)
             {
-                MessageBox.Show("Please enter numeric between 3-15");
-                txtDurum.Text = "Please enter numeric between 3-15";
+                MessageBox.Show("Введите от 3 до 15");
+                txtDurum.Text = "Введите от 3 до 15";
             }
             else {
             SolveFor(Convert.ToInt16(input));
@@ -117,7 +117,7 @@ namespace HanoiTowers
 
             inputBox.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             inputBox.ClientSize = size;
-            inputBox.Text = "Please enter numeric between 3-15";
+            inputBox.Text = "Введите от 3 до 15";
 
             System.Windows.Forms.TextBox textBox = new TextBox();
             textBox.Size = new System.Drawing.Size(size.Width - 10, 23);
