@@ -42,25 +42,26 @@
             this.pbKule3 = new System.Windows.Forms.PictureBox();
             this.lbl1 = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            ((System.ComponentModel.ISupportInitialize)(this.pbKule1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize) (this.pbKule1)).BeginInit();
             this.statusStrip1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbKule2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbKule3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize) (this.pbKule2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize) (this.pbKule3)).BeginInit();
             this.SuspendLayout();
             // 
             // lstHamleler
             // 
             this.lstHamleler.FormattingEnabled = true;
-            this.lstHamleler.Location = new System.Drawing.Point(13, 38);
+            this.lstHamleler.Location = new System.Drawing.Point(12, 101);
             this.lstHamleler.Name = "lstHamleler";
-            this.lstHamleler.Size = new System.Drawing.Size(142, 485);
+            this.lstHamleler.Size = new System.Drawing.Size(86, 433);
             this.lstHamleler.TabIndex = 0;
             // 
             // pbKule1
             // 
-            this.pbKule1.Image = ((System.Drawing.Image)(resources.GetObject("pbKule1.Image")));
-            this.pbKule1.Location = new System.Drawing.Point(160, 25);
+            this.pbKule1.BackColor = System.Drawing.SystemColors.Control;
+            this.pbKule1.Image = ((System.Drawing.Image) (resources.GetObject("pbKule1.Image")));
+            this.pbKule1.Location = new System.Drawing.Point(160, 34);
             this.pbKule1.Name = "pbKule1";
             this.pbKule1.Size = new System.Drawing.Size(200, 500);
             this.pbKule1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -69,13 +70,14 @@
             // 
             // statusStrip1
             // 
-            this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.txtDurum});
+            this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {this.txtDurum});
             this.statusStrip1.Location = new System.Drawing.Point(0, 539);
             this.statusStrip1.Name = "statusStrip1";
             this.statusStrip1.Size = new System.Drawing.Size(784, 22);
             this.statusStrip1.TabIndex = 2;
             this.statusStrip1.Text = "statusStrip1";
+            this.statusStrip1.Visible = false;
+            this.statusStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.statusStrip1_ItemClicked);
             // 
             // txtDurum
             // 
@@ -85,47 +87,40 @@
             // 
             // menuStrip1
             // 
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.btnYeni,
-            this.oynatToolStripMenuItem,
-            this.cmbHiz});
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {this.btnYeni, this.oynatToolStripMenuItem, this.cmbHiz});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(784, 27);
+            this.menuStrip1.Size = new System.Drawing.Size(784, 24);
             this.menuStrip1.TabIndex = 3;
             this.menuStrip1.Text = "menuStrip1";
             // 
             // btnYeni
             // 
             this.btnYeni.Name = "btnYeni";
-            this.btnYeni.Size = new System.Drawing.Size(43, 23);
-            this.btnYeni.Text = "New";
+            this.btnYeni.Size = new System.Drawing.Size(62, 20);
+            this.btnYeni.Text = "Создать";
             this.btnYeni.Click += new System.EventHandler(this.btnYeni_Click);
             // 
             // oynatToolStripMenuItem
             // 
             this.oynatToolStripMenuItem.Name = "oynatToolStripMenuItem";
-            this.oynatToolStripMenuItem.Size = new System.Drawing.Size(41, 23);
-            this.oynatToolStripMenuItem.Text = "Play";
+            this.oynatToolStripMenuItem.Size = new System.Drawing.Size(58, 20);
+            this.oynatToolStripMenuItem.Text = "Начать";
             this.oynatToolStripMenuItem.Click += new System.EventHandler(this.oynatToolStripMenuItem_Click);
             // 
             // cmbHiz
             // 
-            this.cmbHiz.Items.AddRange(new object[] {
-            "Slower - 0.5 Move / Sec",
-            "Slow - 1 Move / Sec",
-            "Normal - 2 Move / Sec",
-            "Fast - 4 Move / Sec",
-            "Faster - 5 Move / Sec"});
+            this.cmbHiz.Items.AddRange(new object[] {"Slower - 0.5 Move / Sec", "Slow - 1 Move / Sec", "Normal - 2 Move / Sec", "Fast - 4 Move / Sec", "Faster - 5 Move / Sec"});
             this.cmbHiz.Name = "cmbHiz";
             this.cmbHiz.Size = new System.Drawing.Size(121, 23);
             this.cmbHiz.Text = "Speed";
+            this.cmbHiz.Visible = false;
             this.cmbHiz.SelectedIndexChanged += new System.EventHandler(this.cmbHiz_IndexChanged);
             // 
             // pbKule2
             // 
-            this.pbKule2.Image = ((System.Drawing.Image)(resources.GetObject("pbKule2.Image")));
-            this.pbKule2.Location = new System.Drawing.Point(366, 25);
+            this.pbKule2.Image = ((System.Drawing.Image) (resources.GetObject("pbKule2.Image")));
+            this.pbKule2.Location = new System.Drawing.Point(366, 34);
             this.pbKule2.Name = "pbKule2";
             this.pbKule2.Size = new System.Drawing.Size(200, 500);
             this.pbKule2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -134,8 +129,8 @@
             // 
             // pbKule3
             // 
-            this.pbKule3.Image = ((System.Drawing.Image)(resources.GetObject("pbKule3.Image")));
-            this.pbKule3.Location = new System.Drawing.Point(571, 25);
+            this.pbKule3.Image = ((System.Drawing.Image) (resources.GetObject("pbKule3.Image")));
+            this.pbKule3.Location = new System.Drawing.Point(572, 34);
             this.pbKule3.Name = "pbKule3";
             this.pbKule3.Size = new System.Drawing.Size(200, 500);
             this.pbKule3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -145,11 +140,12 @@
             // lbl1
             // 
             this.lbl1.AutoSize = true;
-            this.lbl1.Location = new System.Drawing.Point(10, 25);
+            this.lbl1.Location = new System.Drawing.Point(12, 85);
             this.lbl1.Name = "lbl1";
-            this.lbl1.Size = new System.Drawing.Size(81, 13);
+            this.lbl1.Size = new System.Drawing.Size(33, 13);
             this.lbl1.TabIndex = 6;
-            this.lbl1.Text = "Moves to Solve";
+            this.lbl1.Text = "Шаги";
+            this.lbl1.Click += new System.EventHandler(this.lbl1_Click);
             // 
             // timer1
             // 
@@ -160,6 +156,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSize = true;
+            this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(784, 561);
             this.Controls.Add(this.lbl1);
             this.Controls.Add(this.pbKule3);
@@ -171,18 +169,17 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Form1";
-            this.Text = "Hanoi Kuleleri Problemi";
+            this.Text = "Ханойские башни";
             this.Load += new System.EventHandler(this.Form1_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pbKule1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize) (this.pbKule1)).EndInit();
             this.statusStrip1.ResumeLayout(false);
             this.statusStrip1.PerformLayout();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbKule2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbKule3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize) (this.pbKule2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize) (this.pbKule3)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
-
         }
 
         #endregion

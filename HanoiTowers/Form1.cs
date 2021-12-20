@@ -41,7 +41,7 @@ namespace HanoiTowers
             lstHamleler.Items.Clear();
             foreach (Move m in solutionMoves)
             {
-                lstHamleler.Items.Add(i + ".Move= Fr: " + m.poleFrom + "→To: " + m.poleTo);
+                lstHamleler.Items.Add(i + ". " + m.poleFrom + "→ " + m.poleTo);
                 i++;
             }
             txtDurum.Text = "Finished Solving. Total Move Count : " +  (Math.Pow(2,diskSize)-1).ToString() + ". Click Play to watch moves";
@@ -71,7 +71,7 @@ namespace HanoiTowers
                 btn.Location = new Point(160 + (i * 5), 470 - (i * 30));
                 btn.Size = new Size(200 - (i * 10), 30);
                 btn.FlatAppearance.BorderSize = 0;
-                btn.FlatStyle = FlatStyle.Flat;
+                btn.FlatStyle = FlatStyle.Popup;
                 btn.BackColor = RandomColor();
                 this.Controls.Add(btn);
                 Pole1.Add(btn);
@@ -79,8 +79,16 @@ namespace HanoiTowers
             pbKule1.SendToBack();
         }
 
+        private int count = 0;
         private Color RandomColor()
         {
+            if (count <= 235)
+            {
+                count += 20;
+                return Color.FromArgb(count, count+10, count+10);
+                
+            }
+            count = 0;
             return Color.FromArgb(rnd.Next(255), rnd.Next(255), rnd.Next(255));
         }
 
@@ -277,5 +285,14 @@ namespace HanoiTowers
         }
 
 
+        private void statusStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+            throw new System.NotImplementedException();
+        }
+
+        private void lbl1_Click(object sender, EventArgs e)
+        {
+            throw new System.NotImplementedException();
+        }
     }
 }
